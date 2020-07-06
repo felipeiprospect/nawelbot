@@ -20,7 +20,9 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   // Abre una url en el navegador
-  await page.goto('https://www.iprospect.com/es/cl/about-us/our-team/');
+  await page.goto('https://www.iprospect.com/es/cl/about-us/our-team/', {
+    timeout: 100000
+  })
 
   // Tamaño de la ventana
   await page.setViewport({
